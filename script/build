@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
 
+if [ ! -d "zepto/dist" ]; then
+	git submodule init && git submodule update
+fi
+
 cd zepto
 npm install
 npm run-script dist
